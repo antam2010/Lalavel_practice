@@ -28,6 +28,9 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+
+    protected $table = 'laravel_users'; // 테이블 이름을 laravel_users로 변경
+
     /**
      * Create a new controller instance.
      *

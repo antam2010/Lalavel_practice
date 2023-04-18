@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
+        Schema::create('laravel_password_resets', function (Blueprint $table) {
+            $table->string('email',30)->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists('laravel_password_resets');
     }
 };
